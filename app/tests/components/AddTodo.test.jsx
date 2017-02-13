@@ -31,6 +31,9 @@ describe('AddTodo', () => {
   addTodo.refs.todoText.value = '';
   TestUtils.Simulate.submit($el.find('form')[0]);
 
+  // when not having root div, $el (selects root component!) already contains the form
+  // TestUtils.Simulate.submit($el[0]);
+
   expect(spy).toNotHaveBeenCalled();
   });
 
