@@ -7,7 +7,7 @@ describe('Reducers', () => {
   describe('searchTextReducer', () => {
     it('should set searchText', () => {
       var action = {
-        type: 'SET_SEATCH_TEXT',
+        type: 'SET_SEARCH_TEXT',
         searchText: 'dog'
       };
       var res = reducers.searchTextReducer(df(''), df(action));
