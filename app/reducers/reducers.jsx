@@ -24,13 +24,7 @@ export var todosReducer = (state = [], action) => {
     case 'ADD_TODO':
       return [
         ...state,
-        {
-          id: uuid(),
-          text: action.text,
-          completed: false,
-          createdAt: moment().unix(),
-          completedAt: null
-        }
+        action.todo
       ];
     case 'TOGGLE_TODO':
       //needs to match the item of action id in todos array  -> action.id find id in state
